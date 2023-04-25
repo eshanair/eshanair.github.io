@@ -203,13 +203,14 @@ button:hover {background-color:var(--color-accent-off);}
 
 	<div id="statesmap" style="display:block;position:relative;margin:30px;height:70%;border:0px silver solid;text-align:center;"></div>
 
-	<tr id="datalist" style="display:block;position:absolute;margin:10px;width:200px;height:300px;padding:10px;font:100 13px helvetica;line-height: 22px; right:10px; bottom:10px; overflow:scroll;border:1px #404040 solid;background-color: rgba(120,120,120,0.1);"></td>
-
-	<p style="text-align:center; font-size:18px; font-family:serif; margin: 0 20px; padding-left: 20px;">
-		Using Python Modules 
-	</p>
-
-	<img src="117_1.png" alt="Scatterplot">
+		<tr id="datalist" style="display:block;position:absolute;margin:10px;width:calc(100% - 240px);height:300px;padding:10px;font:100 13px helvetica;line-height: 22px; right:10px; bottom:10px; overflow:scroll;border:1px #404040 solid;background-color: rgba(120,120,120,0.1);">
+			<div style="display: flex; align-items: center;">
+				<img src="117_1.png" alt="Scatterplot" style="width: 150px; margin-right: 20px;">
+				<p style="font-size:18px; font-family:serif; margin: 0;">
+					Using Python Modules I created the scatterplot to the left thatzz 
+				</p>
+			</div>
+		</tr>
 
 </body></html>
 
@@ -243,13 +244,13 @@ button:hover {background-color:var(--color-accent-off);}
 		mld.innerHTML = "Abortion Legality:" +
 			"<tr style='float:right;width:40px;'></td>" +
 			"<br>" +
-			"0:<tr style='float:right;'>   Illegal</td>" +
+			"0:<span style='float:right;'>   Illegal</span>" +
 			"<br>" +
-			"1:<tr style='float:right;'>   Restricted</td>" +
+			"1:<span style='float:right;'>   Restricted</span>" +
 			"<br>" +
-			"2:<tr style='float:right;x;'>   Available</td>" +
+			"2:<span style='float:right;x;'>   Available</span>" +
 			"<br>" +
-			"3:<tr style='float:right;'>   Unrestricted</td>";
+			"3:<span style='float:right;'>   Unrestricted</span>";
 
 		document.getElementById( 'datalist' ).appendChild(mld);
 
