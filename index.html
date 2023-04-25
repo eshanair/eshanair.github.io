@@ -192,7 +192,7 @@ button:hover {background-color:var(--color-accent-off);}
 
 	<div style="display:block;text-align: center;position:relative;margin:30px;height:50px;font:100 30px serif;">Percentage Women in Legislature vs Abortion Legality</div>
 
-	<p style="text-align:center; font-size:18px; font-family:serif; margin: 0 20px; padding-left: 20px;">
+	<p style="text-align:center; font-size:18px; font-family:san-serif; margin: 0 20px; padding-left: 20px;">
 		Within US politics, there is a disparity in the representation of men and women in legislature. In 2019, only 23.7% of the seats in the 
 		US Congress were occupied by women, drastically underrepresenting the population of women in this country (Teele, 2018). In order to better understand 
 		how underrepresentation impacts the health of women in the United States, below is an analysis of the percentage of women in legilsature by state, and 
@@ -203,7 +203,7 @@ button:hover {background-color:var(--color-accent-off);}
 
 	<div id="statesmap" style="display:block;position:relative;margin:30px;height:70%;border:0px silver solid;text-align:center;"></div>
 
-	<div id="datalist" style="display:block;position:absolute;margin:10px;width:200px;height:300px;padding:10px;font:100 13px helvetica;line-height: 22px; right:10px; bottom:10px; overflow:auto;border:1px #404040 solid;background-color: rgba(120,120,120,0.1);"></div>
+	<div id="datalist" style="display:block;position:absolute;margin:10px;width:200px;height:300px;padding:10px;font:100 13px helvetica;line-height: 22px; right:10px; bottom:10px; overflow:scroll;border:1px #404040 solid;background-color: rgba(120,120,120,0.1);"></div>
 
 	<p style="text-align:center; font-size:18px; font-family:serif; margin: 0 20px; padding-left: 20px;">
 		Using Python Modules 
@@ -241,15 +241,15 @@ button:hover {background-color:var(--color-accent-off);}
 		let mld = document.createElement('div');
 		mld.setAttribute("style", "margin:6px;");
 		mld.innerHTML = "Abortion Legality:" +
-			"<span style='float:right;width:40px;'>%</span>" +
+			"<span style='float:right;width:40px;'></span>" +
 			"<br>" +
-			"0:<span style='float:right;width:20px;'>Illegal</span>" +
+			"0:<span style='float:right;'>   Illegal</span>" +
 			"<br>" +
-			"1:<span style='float:right;width:20px;'>Restricted</span>" +
+			"1:<span style='float:right;'>   Restricted</span>" +
 			"<br>" +
-			"2:<span style='float:right;width:20px;'>Available</span>" +
+			"2:<span style='float:right;x;'>   Available</span>" +
 			"<br>" +
-			"3:<span style='float:right;width:20px;'>Unrestricted</span>";
+			"3:<span style='float:right;'>   Unrestricted</span>";
 
 		document.getElementById( 'datalist' ).appendChild(mld);
 
