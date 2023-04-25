@@ -192,8 +192,8 @@ button:hover {background-color:var(--color-accent-off);}
 
 	<div style="display:block;text-align: center;position:relative;margin:30px;height:50px;font:100 30px serif;">Percentage Women in Legislature vs Abortion Legality</div>
 
-	<p style="text-align:center; font-size:18px; font-family:serif; font-weight:bold; margin: 0 20px; padding-left: 20px;">
-		&emsp Within US politics, there is a disparity in the representation of men and women in legislature. In 2019, only 23.7% of the seats in the 
+	<p style="text-align:center; font-size:18px; font-family:serif; margin: 0 20px; padding-left: 20px;">
+		Within US politics, there is a disparity in the representation of men and women in legislature. In 2019, only 23.7% of the seats in the 
 		US Congress were occupied by women, drastically underrepresenting the population of women in this country (Teele, 2018). In order to better understand 
 		how underrepresentation impacts the health of women in the United States, below is an analysis of the percentage of women in legilsature by state, and 
 		whether abortions are legal in each state. The second measure is used to see whether higher representation could be correlated to greater access to women's health services.
@@ -225,13 +225,23 @@ button:hover {background-color:var(--color-accent-off);}
 		}
 		//console.log(mapdat)
 		// render list
-		for (let i=0; i < mapdat.length; i++)
-		{
-			let mld = document.createElement('div');
-			mld.setAttribute("style", "margin:6px;");
-			mld.innerHTML = mapdat[i].state + "<span style='float:right;width:40px;'>" + mapdat[i].women + "%</span> <span style='float:right;width:30px;'>" + mapdat[i].legal + "</span>";
-			document.getElementById( 'datalist' ).appendChild(mld);
-		}
+		// for (let i=0; i < mapdat.length; i++)
+		// {
+		// 	let mld = document.createElement('div');
+		// 	mld.setAttribute("style", "margin:6px;");
+		// 	mld.innerHTML = mapdat[i].state + "<span style='float:right;width:40px;'>" + mapdat[i].women + "%</span> <span style='float:right;width:30px;'>" + mapdat[i].legal + "</span>";
+		// 	document.getElementById( 'datalist' ).appendChild(mld);
+		// }
+		let mld = document.createElement('div');
+		mld.setAttribute("style", "margin:6px;");
+		mld.innerHTML = "Abortion Legality:" + "<span style='float:right;width:40px;'>" + "%</span>";
+		mld.innerHTML = "0:" + "<span style='float:right;width:40px;'>" + "Illegal" + "%</span>";
+		mld.innerHTML = "1:" + "<span style='float:right;width:40px;'>" + "Restricted" + "%</span>";
+		mld.innerHTML = "2:" + "<span style='float:right;width:40px;'>" + "Available" + "%</span>";
+		mld.innerHTML = "3:" + "<span style='float:right;width:40px;'>" + "Unrestricted" + "%</span>";
+		document.getElementById( 'datalist' ).appendChild(mld);
+
+
 		// update map
 		setTimeout( function(){
 			smap.data( {heatmap:mapdat} );
