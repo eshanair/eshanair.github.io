@@ -1,0 +1,237 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "https://www.w3.org/TR/html4/transitional.dtd"> 
+<html lang='en' class="theme">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-cache"/>
+
+<title>Percentage Women in Legislature vs Abortion Legality</title>
+<style>
+
+@font-face { font-family: 'RobotoL'; src: url('js/RobotoCondensed-Light.ttf'); }
+@font-face { font-family: 'RobotoR'; src: url('js/RobotoCondensed-Regular.ttf'); }
+html, body {overflow:hidden;margin: 0;padding: 0;height: 100%;width: 100%;font:300 15px helvetica; line-height:20px;color: var(--color-onsecondary);background-color:var(--color-secondary); transition: color 0.5s, font-size 0.5; }
+.theme { --color-primary: #353439; --color-onprimary: #b6b6fc;--color-secondary: #1c1c22; --color-onsecondary: #cacaca; --color-plain: #26262b; --color-onplain: #fefefe; --color-accent: #fa7fef;  --color-accent-off: #859996; --color-onaccent: #2d6b54; --color-accent-text: #41a3ff; --color-geo-access: #8bff00; --color-geo-live: #16daea; --color-geo-anomaly: #ff5488; --color-brand: #63c2b6; --color-input-text: #298af7; --color-input-btn: #2185e0;--color-increase :#57DA67; --color-decrease :#ff4545;--color-alert-A: #df0d0e; --color-alert-B: #f06014; --color-alert-C: #ddc258; }	
+input[type="text"] {font:300 14px helvetica; line-height:18px; color:var(--color-onplain); padding:5px;margin:3px;outline: none; }
+input[type="submit"],[type="button"] {font:300 12px helvetica;color:var(--color-onaccent);background-color:var(--color-accent);border:0px #5d94ea solid;padding:7px;width:65px;border-radius:5px;cursor:pointer;transition:all 0.3s;}
+input[type="submit"],[type="button"]:hover{color:var(--color-accent);background-color:var(--color-onaccent);  }
+input::-webkit-calendar-picker-indicator {  position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; cursor: pointer;}
+div {margin:0px;padding:0px;border:0px #efefef solid; }
+.svgbtn { fill:none;stroke:var(--color-accent);stroke-width:2; stroke-linejoin:round; transition:0.5s; }
+.svgbtn:hover { stroke:var(--color-accent-text);} 	
+.title {display:inline-block;line-height:3rem;font:300 2rem helvetica;color:var(--color-onprimary);}
+button {display:inline-block;font:300 14px helvetica;color:#303030;background-color:var(--color-accent);margin:5px;padding:10px;border-radius:5px;border:0px;cursor:pointer;transition:0.3s;}
+button:hover {background-color:var(--color-accent-off);}
+
+
+</style>
+
+    
+    
+	<script src="js/d3-geo-projection.v1.min.js"></script>
+	<script src="js/topojson.v2.min.js"></script>
+    <script src="js/d3.v4.min.js"></script>
+    <script src="js/d3StatesMap.min.js"></script>
+
+<script>
+
+    function getStateCode(s)
+	{
+		s = s.toUpperCase();
+		if ( this.statecodes == null  )
+		{
+			this.statecodes = new Map();
+			this.statecodes.set("AL", "01");
+			this.statecodes.set("AK", "02");
+			this.statecodes.set("AZ", "04");
+			this.statecodes.set("AR", "05");
+			this.statecodes.set("CA", "06");
+			this.statecodes.set("CO", "08");
+			this.statecodes.set("CT", "09");
+			this.statecodes.set("DE", "10");
+			this.statecodes.set("DC", "11");
+			this.statecodes.set("FL", "12");
+			this.statecodes.set("GA", "13");
+			this.statecodes.set("HI", "15"); 
+			this.statecodes.set("ID", "16");
+			this.statecodes.set("IL", "17");
+			this.statecodes.set("IN", "18");
+			this.statecodes.set("IA", "19");
+			this.statecodes.set("KS", "20");
+			this.statecodes.set("KY", "21");
+			this.statecodes.set("LA", "22");
+			this.statecodes.set("ME", "23");
+			this.statecodes.set("MD", "24");
+			this.statecodes.set("MA", "25");
+			this.statecodes.set("MI", "26");
+			this.statecodes.set("MN", "27");
+			this.statecodes.set("MS", "28");
+			this.statecodes.set("MO", "29");
+			this.statecodes.set("MT", "30");
+			this.statecodes.set("NE", "31");
+			this.statecodes.set("NV", "32");
+			this.statecodes.set("NH", "33");
+			this.statecodes.set("NJ", "34");
+			this.statecodes.set("NM", "35");
+			this.statecodes.set("NY", "36");
+			this.statecodes.set("NC", "37");
+			this.statecodes.set("ND", "38");
+			this.statecodes.set("OH", "39");
+			this.statecodes.set("OK", "40");
+			this.statecodes.set("OR", "41");
+			this.statecodes.set("PA", "42");
+			this.statecodes.set("RI", "44");
+			this.statecodes.set("SC", "45");
+			this.statecodes.set("SD", "46");
+			this.statecodes.set("TN", "47");
+			this.statecodes.set("TX", "48");
+			this.statecodes.set("UT", "49");
+			this.statecodes.set("VT", "50");
+			this.statecodes.set("VA", "51");
+			this.statecodes.set("WA", "53");
+			this.statecodes.set("WV", "54");
+			this.statecodes.set("WI", "55");
+			this.statecodes.set("WY", "56");
+			
+			this.statecodes.set("AS", "60");
+			this.statecodes.set("FM", "64");
+			this.statecodes.set("GU", "66");
+			this.statecodes.set("MH", "68");
+			this.statecodes.set("MP", "69");
+			this.statecodes.set("PW", "70");
+			this.statecodes.set("PR", "72");
+			this.statecodes.set("UM", "74");
+			this.statecodes.set("VI", "78");
+		}
+		
+		if ( this.statecodes.has(s) ) return this.statecodes.get(s);
+		else return "";
+	}
+
+	function getStateName(s)
+	{
+		s = s.toUpperCase();
+		
+		if ( this.statenames == null  )
+		{
+			this.statenames = new Map();
+			
+			this.statenames.set("AL", "Alabama");
+			this.statenames.set("AK", "Alaska");
+			this.statenames.set("AZ", "Arizona");
+			this.statenames.set("AR", "Arkansas");
+			this.statenames.set("CA", "California");
+			this.statenames.set("CO", "Colorado");
+			this.statenames.set("CT", "Connecticut");
+			this.statenames.set("DE", "Delaware");
+			this.statenames.set("DC", "District of Columbia");
+			this.statenames.set("FL", "Florida");
+			this.statenames.set("GA", "Georgia");
+			this.statenames.set("HI", "Hawaii");
+			this.statenames.set("ID", "Idaho");
+			this.statenames.set("IL", "Illinois");
+			this.statenames.set("IN", "Indiana");
+			this.statenames.set("IA", "Iowa");
+			this.statenames.set("KS", "Kansas");
+			this.statenames.set("KY", "Kentucky");
+			this.statenames.set("LA", "Louisiana");
+			this.statenames.set("ME", "Maine");
+			this.statenames.set("MD", "Maryland");
+			this.statenames.set("MA", "Massachusetts");
+			this.statenames.set("MI", "Michigan");
+			this.statenames.set("MN", "Minnesota");
+			this.statenames.set("MS", "Mississippi");
+			this.statenames.set("MO", "Missouri");
+			this.statenames.set("MT", "Montana");
+			this.statenames.set("NE", "Nebraska");
+			this.statenames.set("NV", "Nevada");
+			this.statenames.set("NH", "New Hampshire");
+			this.statenames.set("NJ", "New Jersey");
+			this.statenames.set("NM", "New Mexico");
+			this.statenames.set("NY", "New York");
+			this.statenames.set("NC", "North Carolina");
+			this.statenames.set("ND", "North Dakota");
+			this.statenames.set("OH", "Ohio");
+			this.statenames.set("OK", "Oklahoma");
+			this.statenames.set("OR", "Oregon");
+			this.statenames.set("PA", "Pennsylvania");
+			this.statenames.set("RI", "Rhode Island");
+			this.statenames.set("SC", "South Carolina");
+			this.statenames.set("SD", "South Dakota");
+			this.statenames.set("TN", "Tennessee");
+			this.statenames.set("TX", "Texas");
+			this.statenames.set("UT", "Utah");
+			this.statenames.set("VT", "Vermont");
+			this.statenames.set("VA", "Virginia");
+			this.statenames.set("WA", "Washington");
+			this.statenames.set("WV", "West Virginia");
+			this.statenames.set("WI", "Wisconsin");
+			this.statenames.set("WY", "Wyoming");
+			                    
+			this.statenames.set("AS", "America Samoa");
+			this.statenames.set("FM", "Federated States of Micronesia");
+			this.statenames.set("GU", "Guam");
+			this.statenames.set("MH", "Marshall Islands");
+			this.statenames.set("MP", "Northern Mariana Islands");
+			this.statenames.set("PW", "Palau");
+			this.statenames.set("PR", "Puerto Rico");
+			this.statenames.set("UM", "U.S. Minor Outlying Islands");
+			this.statenames.set("VI", "Virgin Islands of the United States");
+		}
+		
+		if ( this.statenames.has(s) ) return this.statenames.get(s);
+		else return s;
+	}
+
+</script>
+
+</head>	<body>
+
+	<div style="display:block;position:relative;margin:30px;height:40px;font:100 24px helvetica;">Percentage Women in Legislature vs Abortion Legality</div>
+
+    <div id="statesmap" style="display:block;position:relative;margin:30px;height:70%;border:0px silver solid;text-align:center;"></div>
+
+	<div id="datalist" style="display:block;position:absolute;margin:10px;width:200px;height:300px;padding:10px;font:100 13px helvetica;line-height: 22px; right:10px; bottom:10px; overflow:auto;border:1px #404040 solid;background-color: rgba(120,120,120,0.1);"></div>
+
+</body></html>
+
+<script>
+    let d = document.getElementById("statesmap");
+    var smap = new d3StatesMap()
+		.width( d.getBoundingClientRect().width )
+		.height( d.getBoundingClientRect().height )
+		.colorRange(['#cdf0cd','#6ac76a']);
+	d3.select('#statesmap').call(smap); 
+
+    var mapdat = [];
+	d3.csv("js/womens.csv", function(data) {
+		// read CSV
+		for (var i = 0; i < data.length; i++) {
+			//console.log(data[i]);
+			let inf = "Percentage: " + data[i].Women + "%<br>Legality: " + data[i].Legality;
+			mapdat.push( { id:this.getStateCode(data[i].Code), state:data[i].States, count: parseInt(data[i].Legality)+1, key:data[i].Code, women:data[i].Women, legal:data[i].Legality, info: inf } );
+		}
+		//console.log(mapdat)
+		// render list
+		for (let i=0; i < mapdat.length; i++)
+		{
+			let mld = document.createElement('div');
+			mld.setAttribute("style", "margin:6px;");
+			mld.innerHTML = mapdat[i].state + "<span style='float:right;width:40px;'>" + mapdat[i].women + "%</span> <span style='float:right;width:30px;'>" + mapdat[i].legal + "</span>";
+			document.getElementById( 'datalist' ).appendChild(mld);
+		}
+		// update map
+		setTimeout( function(){
+			smap.data( {heatmap:mapdat} );
+			smap.updateMap(true);
+		}, 100);
+	});
+
+   
+    
+	
+
+</script>
+
+
+
