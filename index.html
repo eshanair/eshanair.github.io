@@ -205,6 +205,10 @@ button:hover {background-color:var(--color-accent-off);}
 
 	<div id="datalist" style="display:block;position:absolute;margin:10px;width:200px;height:300px;padding:10px;font:100 13px helvetica;line-height: 22px; right:10px; bottom:10px; overflow:auto;border:1px #404040 solid;background-color: rgba(120,120,120,0.1);"></div>
 
+	<p style="text-align:center; font-size:18px; font-family:serif; margin: 0 20px; padding-left: 20px;">
+		Using Python Modules 
+	</p>
+
 </body></html>
 
 <script>
@@ -234,11 +238,17 @@ button:hover {background-color:var(--color-accent-off);}
 		// }
 		let mld = document.createElement('div');
 		mld.setAttribute("style", "margin:6px;");
-		mld.innerHTML = "Abortion Legality:" + "<span style='float:right;width:40px;'>" + "%</span>";
-		mld.innerHTML = "0:" + "<span style='float:right;width:40px;'>" + "Illegal" + "%</span>";
-		mld.innerHTML = "1:" + "<span style='float:right;width:40px;'>" + "Restricted" + "%</span>";
-		mld.innerHTML = "2:" + "<span style='float:right;width:40px;'>" + "Available" + "%</span>";
-		mld.innerHTML = "3:" + "<span style='float:right;width:40px;'>" + "Unrestricted" + "%</span>";
+		mld.innerHTML = "Abortion Legality:" +
+			"<span style='float:right;width:40px;'>%</span>" +
+			"<br>" +
+			"0:<span style='float:right;width:20px;'>Illegal</span>" +
+			"<br>" +
+			"1:<span style='float:right;width:20px;'>Restricted</span>" +
+			"<br>" +
+			"2:<span style='float:right;width:20px;'>Available</span>" +
+			"<br>" +
+			"3:<span style='float:right;width:20px;'>Unrestricted</span>";
+
 		document.getElementById( 'datalist' ).appendChild(mld);
 
 
