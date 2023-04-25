@@ -203,7 +203,7 @@ button:hover {background-color:var(--color-accent-off);}
 
 	<div id="statesmap" style="display:block;position:relative;margin:30px;height:70%;border:0px silver solid;text-align:center;"></div>
 
-	<div id="datalist" style="display:block;position:absolute;margin:10px;width:200px;height:300px;padding:10px;font:100 13px helvetica;line-height: 22px; right:10px; bottom:10px; overflow:scroll;border:1px #404040 solid;background-color: rgba(120,120,120,0.1);"></div>
+	<tr id="datalist" style="display:block;position:absolute;margin:10px;width:200px;height:300px;padding:10px;font:100 13px helvetica;line-height: 22px; right:10px; bottom:10px; overflow:scroll;border:1px #404040 solid;background-color: rgba(120,120,120,0.1);"></td>
 
 	<p style="text-align:center; font-size:18px; font-family:serif; margin: 0 20px; padding-left: 20px;">
 		Using Python Modules 
@@ -241,15 +241,15 @@ button:hover {background-color:var(--color-accent-off);}
 		let mld = document.createElement('div');
 		mld.setAttribute("style", "margin:6px;");
 		mld.innerHTML = "Abortion Legality:" +
-			"<span style='float:right;width:40px;'></span>" +
+			"<tr style='float:right;width:40px;'></td>" +
 			"<br>" +
-			"0:<span style='float:right;'>   Illegal</span>" +
+			"0:<tr style='float:right;'>   Illegal</td>" +
 			"<br>" +
-			"1:<span style='float:right;'>   Restricted</span>" +
+			"1:<tr style='float:right;'>   Restricted</td>" +
 			"<br>" +
-			"2:<span style='float:right;x;'>   Available</span>" +
+			"2:<tr style='float:right;x;'>   Available</td>" +
 			"<br>" +
-			"3:<span style='float:right;'>   Unrestricted</span>";
+			"3:<tr style='float:right;'>   Unrestricted</td>";
 
 		document.getElementById( 'datalist' ).appendChild(mld);
 
