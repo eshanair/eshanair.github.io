@@ -204,7 +204,7 @@ button:hover {background-color:var(--color-accent-off);}
 	<table align=center>
 		<tr>
 		<td>
-			<img src="117_1.png" alt="Scatterplot" style="width: 250px; margin-right: 20px;">
+			<img src="117_1.png" alt="Scatterplot" style="width: 50%; margin-right: 20px;">
 		</td>
 		<td>
 			<span style="font:100 16px 'RobotoL', Helvetica;">
@@ -221,8 +221,8 @@ button:hover {background-color:var(--color-accent-off);}
     let d = document.getElementById("statesmap");
     var smap = new d3StatesMap()
 		.width( d.getBoundingClientRect().width )
-		.height( d.getBoundingClientRect().height )
-		.colorRange(['green','red']);
+		.height( d.getBoundingClientRect().height );
+		//.colorRange(['green','red']);
 	d3.select('#statesmap').call(smap); 
 
     var mapdat = [];
